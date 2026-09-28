@@ -1,0 +1,18 @@
+App(
+    appid="hydra_fz",
+    name="Hydra FZ",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="hydra_fz_app",
+    sources=[
+        "hydra_fz.c",
+        "hydra_engine.c",
+        "hydra_external.c",
+        "hydra_external_protocol.c",
+    ],
+    requires=["gui", "storage", "dialogs"],
+    stack_size=4096,
+    fap_category="Tools",
+    fap_description="Offline authentication defense lab and loopback Hydra controller",
+    fap_author="THC Hydra contributors; Flipper port contributors",
+    fap_version="1.0.2",
+)

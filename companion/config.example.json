@@ -1,0 +1,7 @@
+{
+  "host": "127.0.0.1",
+  "service": "ssh",
+  "port": 2222,
+  "login": "labuser",
+  "path": "/"
+}
