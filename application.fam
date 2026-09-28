@@ -14,5 +14,5 @@ App(
     fap_category="Tools",
     fap_description="Offline authentication defense lab and loopback Hydra controller",
     fap_author="THC Hydra contributors; Flipper port contributors",
-    fap_version="1.0.2",
+    fap_version="1.0.3",
 )

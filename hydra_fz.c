@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define HYDRA_VERSION "1.0.2"
+#define HYDRA_VERSION "1.0.3"
 #define HYDRA_REPORT APP_DATA_PATH("report.txt")
 #define HYDRA_REPORT_TMP APP_DATA_PATH("report.txt.partial")
 #define HYDRA_SESSION APP_DATA_PATH("session.txt")
@@ -225,9 +225,9 @@ static bool hydra_load_session(HydraApp* app) {
     }
     uint8_t limit_index = 0U;
     bool known_limit = false;
-    for(uint8_t i = 0U; i < COUNT_OF(hydra_attempt_limits); i++) {
+    for(size_t i = 0U; i < COUNT_OF(hydra_attempt_limits); i++) {
         if(config.attempt_limit == hydra_attempt_limits[i]) {
-            limit_index = i;
+            limit_index = (uint8_t)i;
             known_limit = true;
             break;
         }
@@ -621,10 +621,10 @@ static HydraApp* hydra_alloc(void) {
     item = variable_item_list_add(app->settings, "Protection", 4U, hydra_protection_changed, app);
     app->protection_item = item;
     variable_item_set_current_value_index(item, 0U); variable_item_set_current_value_text(item, hydra_protection_names[0]);
-    item = variable_item_list_add(app->settings, "Attempt limit", COUNT_OF(hydra_attempt_limits), hydra_limit_changed, app);
+    item = variable_item_list_add(app->settings, "Attempt limit", (uint8_t)COUNT_OF(hydra_attempt_limits), hydra_limit_changed, app);
     app->limit_item = item;
     variable_item_set_current_value_index(item, 2U); variable_item_set_current_value_text(item, hydra_attempt_names[2]);
-    item = variable_item_list_add(app->settings, "External baud", COUNT_OF(hydra_bauds), hydra_baud_changed, app);
+    item = variable_item_list_add(app->settings, "External baud", (uint8_t)COUNT_OF(hydra_bauds), hydra_baud_changed, app);
     variable_item_set_current_value_index(item, 0U); variable_item_set_current_value_text(item, hydra_baud_names[0]);
     item = variable_item_list_add(app->settings, "Version", 1U, NULL, app); variable_item_set_current_value_text(item, HYDRA_VERSION);
     view_dispatcher_set_event_callback_context(app->dispatcher, app);

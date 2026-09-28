@@ -2,7 +2,7 @@
 
 Hydra FZ is a Flipper Zero authentication-security lab built around genuine concepts from [THC Hydra](https://github.com/vanhauser-thc/thc-hydra). It has two deliberately separate modes:
 
-Current release: **v1.0.2**.
+Current release: **v1.0.3**.
 
 - **Native Flipper mode** performs real, offline candidate comparisons against a test secret held only in RAM. It supports generated numeric PINs or a newline-delimited candidate file, attempt limits, cancellation/resume, reports, and measured simulations of rate limiting, account lockout, and increasing delay.
 - **External Hydra mode** controls a genuine THC Hydra process running on a Raspberry Pi or another Linux computer over 3.3 V UART. The supplied bridge is intentionally limited to services on that Linux computer's loopback interface; it cannot be redirected to a remote target through the Flipper.
@@ -58,7 +58,7 @@ Use Hydra only on systems you own or have explicit permission to test. The bridg
 ## Compatibility and provenance
 
 - Flipper firmware: official 1.4.3+
-- App version: 1.0.2
+- App version: 1.0.3
 - Upstream snapshot: THC Hydra v9.8dev, commit `17b52613320257a620ce3b5611b2e8196eb6e7fc`
 - License: GNU Affero General Public License v3; see [LICENSE](LICENSE)
 

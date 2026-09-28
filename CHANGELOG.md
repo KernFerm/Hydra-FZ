@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.3 — 2026-09-27
+
+- Corrected the CodeQL high-severity narrow/wide loop comparison in session attempt-limit validation.
+- Changed the array loop index to `size_t` and narrowed it only after the fixed array bound proves the conversion safe.
+- Made intentional 8-bit GUI item-count conversions explicit.
+- Rebuilt, regression-tested, and rescanned the target f7/API 87.1 application.
+
 ## 1.0.2 — 2026-09-27
 
 - Corrected native resume handling, session validation, and attempt-limit completion behavior.

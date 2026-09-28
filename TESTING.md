@@ -29,12 +29,12 @@ Hardware items require the user's actual Flipper, microSD, adapter, and authoriz
 
 ## Verified build — 2026-09-27
 
-- Version: 1.0.2
+- Version: 1.0.3
 - Python companion tests: 5 passed
 - Python syntax compilation: passed
 - Authenticated Snyk Code scan at low-or-higher severity: 0 issues
 - uFBT application check: target 7, API 87.1, passed with no unresolved symbols
-- Artifact: `dist/hydra_fz.fap`, 29,372 bytes
-- SHA-256: `C30CA414CC2DD984ADFB52D1EAC55C8FAB328D17F155451874CC8121CEC44976`
+- Artifact: `dist/hydra_fz.fap`, 29,380 bytes
+- SHA-256: `4FC2D68BAFDE75A04DD7579708E11F5336754F4FED6E2002D542ECEF28D12F23`
 
 The artifact hash above is updated after the final protocol hardening rebuild.
